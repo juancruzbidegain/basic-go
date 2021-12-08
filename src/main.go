@@ -3,33 +3,31 @@ package main
 import "fmt"
 
 func main() {
+	x := 10
+	y := 50
 
-	//Constantes
-	const pi float64 = 3.14
-	const pi2 = 3.14
+	//Suma
+	result := x + y
+	fmt.Println(result)
 
-	fmt.Println("Pi", pi)
-	fmt.Println("Pi2", pi2)
+	// Resta
+	result = y - x
+	fmt.Println(result)
 
-	// Variables
-	base := 12
-	var altura int = 14
-	var area int
+	// Multiplicación
+	result = x * y
+	fmt.Println("Multiplicacion:", result)
 
-	fmt.Println(base, altura, area)
+	// Division
+	result = y / x
+	fmt.Println("Division:", result)
 
-	// Zero Values
-	var a int
-	var b float64
-	var c string
-	var d bool
+	//Resto
+	result = y % x
+	fmt.Println("Modulo / Resto:", result)
 
-	fmt.Println(a, b, c, d)
-
-	// Area Cuadrado BASE * ALTURA
-
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-	fmt.Println(areaCuadrado)
+	//Incremental
+	x++
+	fmt.Println("Incremental:", x)
 
 }
