@@ -3,31 +3,23 @@ package main
 import "fmt"
 
 func main() {
-	x := 10
-	y := 50
 
-	//Suma
-	result := x + y
-	fmt.Println(result)
+	// Paquete FMT
+	helloMenssage := "Hello"
+	worldMessage := "World"
 
-	// Resta
-	result = y - x
-	fmt.Println(result)
+	// Println
+	fmt.Println(helloMenssage, worldMessage)
+	fmt.Println(helloMenssage, worldMessage)
 
-	// Multiplicación
-	result = x * y
-	fmt.Println("Multiplicacion:", result)
+	//Printf
+	nombre := "Platzi"
+	cursos := 500
 
-	// Division
-	result = y / x
-	fmt.Println("Division:", result)
+	fmt.Printf("%s tiene mas de %d cursos \n", nombre, cursos)
+	fmt.Printf("%v tiene mas de %v cursos \n", nombre, cursos)
 
-	//Resto
-	result = y % x
-	fmt.Println("Modulo / Resto:", result)
-
-	//Incremental
-	x++
-	fmt.Println("Incremental:", x)
-
+	//Spintf
+	message := fmt.Sprintf("%s tiene mas de %d cursos", nombre, cursos)
+	fmt.Println(message)
 }
