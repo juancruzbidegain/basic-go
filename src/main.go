@@ -22,4 +22,8 @@ func main() {
 	//Spintf
 	message := fmt.Sprintf("%s tiene mas de %d cursos", nombre, cursos)
 	fmt.Println(message)
+
+	// Tipo de datos
+	fmt.Printf("HelloMessage: %T \n", helloMenssage)
+	fmt.Printf("cursos: %T \n", cursos)
 }
