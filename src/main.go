@@ -1,33 +1,38 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+func isPalindromo(text string) {
+	var textReverse string
+	for i := len(text) - 1; i >= 0; i-- {
+		fmt.Println(string(text[i]))
+		textReverse += string(text[i])
+	}
+
+	fmt.Println(text, textReverse)
+
+	if text == textReverse {
+		fmt.Println("Es palindromo")
+	} else {
+		fmt.Println("No es un palindromo...")
+	}
+}
 
 func main() {
 
-	//Array
-	var array [4]int
-	array[0] = 1
-	array[1] = 2
-	fmt.Println(array, len(array), cap(array))
+	// slice := []string{"Hola", "Que", "Hace"}
+	// for i, value := range slice {
+	// 	fmt.Println(i, value)
+	// }
 
-	//Slice
-	slice := []int{0, 1, 2, 3, 4, 5, 6}
-	fmt.Println("Slice: ", slice, len(slice), cap(slice))
+	// for _, x := range slice {
+	// 	fmt.Println(x)
+	// }
 
-	//Metodos en Slice
-	fmt.Println(slice[0])
-	fmt.Println(slice[0:3])
-	fmt.Println(slice[2:4])
-	fmt.Println(slice[4:])
+	// Funcion para un palindromo
 
-	//* append
-
-	slice = append(slice, 25)
-	fmt.Println(slice)
-
-	// Add new list
-	newSlice := []int{8, 9, 10}
-	slice = append(slice, newSlice...)
-	fmt.Println(slice)
+	isPalindromo("amor a roma")
 
 }
