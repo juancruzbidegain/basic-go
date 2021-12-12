@@ -3,25 +3,27 @@ package main
 import "fmt"
 
 func main() {
-	// Estructura condicional - Switch
-	var dia int8 = 4
+	// Defer: deja para ultimo momento, ejecuta antes de terminar el programa
+	// se usa por ejemplo, para cerrar una conexion con una BD, un archivo
+	// o para cerrar una conexion de red
 
-	switch dia {
-	case 1:
-		fmt.Println("Lunes")
-	case 2:
-		fmt.Println("Martes")
-	case 3:
-		fmt.Println("Miercoles")
-	case 4:
-		fmt.Println("Jueves")
-	case 5:
-		fmt.Println("Viernes")
-	case 6:
-		fmt.Println("Sabado")
-	case 7:
-		fmt.Println("Domingo")
-	default:
-		fmt.Println("Ese no es un día valido de la semana!")
+	defer fmt.Println("Hola")
+	fmt.Println("Mundo")
+
+	// Continue y break
+	for i := 0; i < 10; i++ {
+
+		// Continue
+		if i == 2 {
+			fmt.Println("es 2")
+			continue // el Println de abajo no se ejecuta, vuelve al for
+		}
+
+		fmt.Println(i)
+
+		// Break
+		if i == 5 {
+			break
+		}
 	}
 }
