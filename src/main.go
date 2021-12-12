@@ -3,23 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	// For condicional
-	for i := 0; i <= 10; i++ {
-		fmt.Println("El numero de este ciclo es: ", i)
+
+	valor1 := 1
+	valor2 := 2
+
+	if valor1 == 1 {
+		fmt.Println("Es 1")
+	} else {
+		fmt.Println("No es 1")
 	}
 
-	// For while
-	counter := 0
-	for counter <= 10 {
-		fmt.Println("Counter numero: ", counter)
-		counter++
+	if valor1 == 1 && valor2 == 2 {
+		fmt.Println("Coinciden las 2 condiciones")
 	}
 
-	// For forever
-
-	counterForever := 0
-	for {
-		fmt.Println("Counter Forever Escuchando: ... ", counterForever)
-		counterForever++
-	}
 }
